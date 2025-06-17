@@ -92,12 +92,35 @@ try {
   }
     })
 
-   setTransactionRecord(response.data.data)
-// console.log (response.data.data)
+   setTransactionRecord(response.data.data.reverse())
 } catch (error) {
-    
+                toastAlert({
+                type: "error",
+                      message: error.response.data.message
+            })    
 }
     }
+
+    const deleteHandler = async (id)=> {
+try {
+        const response = await axios.delete(`http://localhost:8000/expenseRecords/${id}`, {
+          headers: {
+    Authorization: `Bearer ${localStorage.getItem("token")}`,
+    'Content-Type': 'application/json'
+  }
+    })
+    toastAlert({
+                type: "success",
+                      message: "Record deleted successfully"
+            })
+    setRefreshRecords(prev => !prev);
+} catch (error) {
+    toastAlert({
+                type: "error",
+                      message: error.response.data.message
+            })    
+}
+}
 
 
     useEffect(()=> {
@@ -125,7 +148,6 @@ try {
                         }}>
                             <li><Link to="/home">HOME</Link></li>
                             <li><Link to="/client">CLIENT</Link></li>
-                            <li><Link to="" onClick={()=> console.log (transactionRecord)}>INCOME</Link></li>
                             <button className="btn" style={{ marginLeft: "15px" }}
                                 onClick={() => document.getElementById('my_modal_3').showModal()}>
                                 + Add Transaction
@@ -223,6 +245,7 @@ try {
 }}>
 <TransactionCard 
 transactionRecord={transactionRecord}
+handleDelete={deleteHandler}
 />
 </div>
 

@@ -49,7 +49,6 @@ tokenCheck()
                             <li><Link to="/home">HOME</Link></li>
                             <li><Link to="/client">CLIENTS</Link></li>
                             <li><Link to="/recordEntry">TRANSACION</Link></li>
-                            <li><Link to="">INCOME</Link></li>
                           <Button variant="text" style={{
                             marginLeft: "10px"
                           }} onClick={logout}>Logout</Button>
