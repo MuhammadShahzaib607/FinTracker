@@ -134,7 +134,8 @@ return (
                               gap: "10px"
                           }}>
                               <li><Link to="/home">HOME</Link></li>
-                              <li><Link to="/recordEntry">TRANSACION</Link></li>
+                              <li><Link to="/recordEntry">TRANSACTION</Link></li>
+                              <li><Link to="/analytics">ANALYTICS</Link></li>
                               {/* <li><a href="" className="btn-primary">+ New Client</a></li> */}
                               <button className="btn" style={{
                                 marginLeft: "15px"

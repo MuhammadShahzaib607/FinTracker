@@ -10,6 +10,7 @@ import { Bounce, ToastContainer } from "react-toastify";
 import AuthRoute from "./routes/AuthRoute.jsx";
 import PrivateRoute from "./routes/PrivateRoute.jsx";
 import RecordEntry from "./pages/RecordEntry.jsx";
+import ClientAnalytics from "./pages/ClientAnalytics.jsx";
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
 <Route path="/home" element={<HomePage />}/>
 <Route path="/client" element={<Client />}/>
 <Route path="/recordEntry" element={<RecordEntry />}/>
+<Route path="/analytics" element={<ClientAnalytics />}/>
 </Route>
 
 
