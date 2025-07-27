@@ -45,7 +45,7 @@ const Signup = ()=> {
 
 try {
 
-       const response = await axios.post("http://localhost:8000/auth/signup", {
+       const response = await axios.post("https://fin-tracker-five-virid.vercel.app/auth/signup", {
         userName,
         email,
         password

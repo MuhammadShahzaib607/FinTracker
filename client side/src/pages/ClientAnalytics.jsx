@@ -21,7 +21,7 @@ const [records, setRecords] = useState([])
 
 const getRecords = async ()=> {
     try {
-        const response = await axios.get("http://localhost:8000/clientRecords/", {
+        const response = await axios.get("https://fin-tracker-five-virid.vercel.app/clientRecords/", {
             headers: {
     Authorization: `Bearer ${localStorage.getItem("token")}`,
     'Content-Type': 'application/json'

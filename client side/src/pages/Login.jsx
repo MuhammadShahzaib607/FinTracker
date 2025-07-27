@@ -35,7 +35,7 @@ e.preventDefault()
 
         try {
             
-            const response = await axios.post("http://localhost:8000/auth/login", {
+            const response = await axios.post("https://fin-tracker-five-virid.vercel.app/auth/login", {
                 email,
                 password
             })

@@ -55,7 +55,7 @@ const RecordEntry = () => {
     }
 
         try {
-            const response = await axios.post("http://localhost:8000/expenseRecords/", {
+            const response = await axios.post("https://fin-tracker-five-virid.vercel.app/expenseRecords/", {
                 title,
                 amount,
                 category,
@@ -85,7 +85,7 @@ const RecordEntry = () => {
 
     const getTransactionRecords = async ()=> {
 try {
-    const response = await axios.get("http://localhost:8000/expenseRecords/", {
+    const response = await axios.get("https://fin-tracker-five-virid.vercel.app/expenseRecords/", {
           headers: {
     Authorization: `Bearer ${localStorage.getItem("token")}`,
     'Content-Type': 'application/json'
@@ -103,7 +103,7 @@ try {
 
     const deleteHandler = async (id)=> {
 try {
-        const response = await axios.delete(`http://localhost:8000/expenseRecords/${id}`, {
+        const response = await axios.delete(`https://fin-tracker-five-virid.vercel.app/expenseRecords/${id}`, {
           headers: {
     Authorization: `Bearer ${localStorage.getItem("token")}`,
     'Content-Type': 'application/json'

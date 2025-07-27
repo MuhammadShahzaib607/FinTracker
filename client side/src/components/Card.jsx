@@ -40,7 +40,7 @@ const handleMenuItemClick = (event, index) => {
     const updateClientRecord = async (e) => {
         try {
             e.preventDefault()
-            const response = await axios.put(`http://localhost:8000/clientRecords/${currentId}`, {
+            const response = await axios.put(`https://fin-tracker-five-virid.vercel.app/clientRecords/${currentId}`, {
                 clientName: updatedClientName,
                 amount: updatedAmount,
                 status: updatedStatus,
