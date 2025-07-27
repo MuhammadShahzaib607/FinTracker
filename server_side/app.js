@@ -30,5 +30,3 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 export default app;
-
-// Error: A Serverless Function has an invalid name: "'server side/index.js'". They must be less than 128 characters long and must not contain any space. : https://vercel.com/docs/functions/limitations#functions-name
