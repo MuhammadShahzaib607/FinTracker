@@ -152,7 +152,7 @@ return (
       <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
     </form>
 
-<Stack> 
+<Stack className='clientCard'> 
 
     <Typography sx={{marginTop: "25px"}}>Client Name</Typography>
     <TextField sx={{width: "100%", marginTop: "10px"}} value={clientName} onChange={(e)=> setClientName(e.target.value)} id="outlined-basic" label="Client Name" variant="outlined" />

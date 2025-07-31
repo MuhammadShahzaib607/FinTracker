@@ -147,6 +147,7 @@ nav ul {
 
 nav ul li {
     margin-left: 25px;
+    font-size: 14px;
 }
 
 nav ul li a {
@@ -229,6 +230,7 @@ margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 40px;
 }
 
@@ -763,4 +765,16 @@ height: 642px;
 display: flex;
 justify-content: center;
 align-items: center;
+}
+
+@media (max-width: 450px) {
+    .transaction-card {
+flex-direction: column;
+    }
+    .transaction-change {
+justify-content: center !important;
+    }
+    .transactionCrdDeleteBtn {
+        justify-content: center !important;
+    }
 }

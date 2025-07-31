@@ -33,7 +33,7 @@ const TransactionCard = ({ transactionRecord, handleDelete }) => {
             >
               {record.category}
             </div>
-            <div
+            <div className="transactionCrdDeleteBtn"
               style={{
                 display: "flex",
                 gap: "10px",
