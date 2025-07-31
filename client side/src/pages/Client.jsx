@@ -234,7 +234,7 @@ height: "50px"
   <Card 
    handleUpdate={ async (id) =>{
 document.getElementById('my_modal_4').showModal()
-const response = await axios.get("http://localhost:8000/clientRecords/", {
+const response = await axios.get("https://fin-tracker-five-virid.vercel.app/clientRecords/", {
             headers: {
     Authorization: `Bearer ${localStorage.getItem("token")}`,
     'Content-Type': 'application/json'
@@ -251,7 +251,7 @@ return record._id === id
    }}  
   handleDelete={(id) =>{
        try {
-        axios.delete(`http://localhost:8000/clientRecords/${id}`)
+        axios.delete(`https://fin-tracker-five-virid.vercel.app/clientRecords/${id}`)
         toastAlert({
           type: "success",
           message: "record deleted successfully"
