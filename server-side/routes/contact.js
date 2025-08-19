@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const messages = await Message.find().sort({ createdAt: -1 });
-    res.json({ success: true, data: "messages" });
+    res.json({ success: true, data: messages });
   } catch (err) {
     res.status(500).json({ success: false, msg: "Server error", error: err.message });
   }
