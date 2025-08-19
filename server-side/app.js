@@ -4,6 +4,7 @@ import mongoose from "mongoose"
 import authRoutes from "./routes/authRoutes.js"
 import expenseRecords from "./routes/expenseRecords.js"
 import clientRecords from "./routes/clientRecords.js"
+import contact from "./routes/contact.js"
 import cors from "cors"
 
 dotenv.config()
@@ -15,6 +16,7 @@ app.use(express.json())
 app.use("/auth", authRoutes)
 app.use("/expenseRecords", expenseRecords)
 app.use("/clientRecords", clientRecords)
+app.use("/contact", contact)
 
 const connectDB = ()=> {
     mongoose.connect(process.env.MONGO_URL)
